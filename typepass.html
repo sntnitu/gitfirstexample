@@ -2,16 +2,20 @@
 <html>
 	<head></head>
 	<body>
-	<p> Password : <input type="password" id="typepass" /></p>
+	<p> Password : <input type="password" id="typepasselem" /></p>
 	<p><input type="checkbox" id="ckeck" onclick="tooglrpass()"/></p>
+	<p><input type="text" id="spass"/></p>
 	
 	<script>
-		var tpas = document.getElementById('typepass');
+		var tpas = document.getElementById('typepasselem');
+		var spass = document.getElementById('spass');
 		function tooglrpass() {
 			if(tpas.type == "password") {
 				tpas.type = "text";
+				spass.value = tpas.value();
 			} else {
 				tpas.type = "password";
+				spass.value = '';
 			}
 		}
 	</script>
