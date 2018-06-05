@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+	<p> Password : <input type="password" id="typepass" /></p>
+	<p><input type="checkbox" id="ckeck" onclick="tooglrpass()"/></p>
+	
+	<script>
+		var tpas = document.getElementById('typepass');
+		function tooglrpass() {
+			if(tpas.type == "password") {
+				tpas.type = "text";
+			} else {
+				tpas.type = "password";
+			}
+		}
+	</script>
+	</body>
+</html>
